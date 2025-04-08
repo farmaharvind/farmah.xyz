@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login - Farmah</title>
+  <style>
+    body {
+      background-color: #007A66;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      font-family: sans-serif;
+      color: white;
+    }
+
+    input {
+      padding: 10px;
+      margin: 10px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: white;
+      color: #007A66;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h2>Enter Portal Password</h2>
+  <input type="password" id="password" placeholder="Password"/>
+  <button onclick="login()">Enter</button>
+
+  <script>
+    function login() {
+      const pw = document.getElementById('password').value;
+      if (pw === 'FarmahSecret123') { // <-- Change this to your real password
+        window.location.href = 'dashboard.html';
+      } else {
+        alert('Incorrect password.');
+      }
+    }
+  </script>
+</body>
+</html>
